@@ -1,294 +1,547 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Abdullah Barut - IT and Data Professional Portfolio">
-  <title>Abdullah Barut | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-</head>
-<body>
+/* ============================================
+   Abdullah Barut Portfolio — styles.css
+   ============================================ */
 
-<!-- SIDEBAR -->
-<aside class="sidebar">
-  <div class="profile-wrap">
-    <img src="profile-2026.jpg" alt="Abdullah Barut">
-  </div>
-  <h1>Abdullah <span>Barut</span></h1>
-  <div class="sidebar-sub">IT &amp; Data Professional</div>
-  <div class="sidebar-location"><i class="fa fa-location-dot"></i> Essex, VT</div>
+:root {
+  --navy: #0f1f3d;
+  --navy-light: #1a3260;
+  --accent: #2e6fdc;
+  --accent-light: #4d8ef0;
+  --gold: #c9a84c;
+  --text: #1a1a2e;
+  --text-muted: #5a6a8a;
+  --bg: #f8f9fc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --card-shadow: 0 4px 24px rgba(15,31,61,0.08);
+  --card-shadow-hover: 0 12px 40px rgba(15,31,61,0.16);
+}
 
-  <nav>
-    <a href="#about"><i class="fa fa-user"></i> About</a>
-    <a href="#projects"><i class="fa fa-diagram-project"></i> Projects</a>
-    <a href="#experience"><i class="fa fa-briefcase"></i> Experience</a>
-    <a href="#education"><i class="fa fa-graduation-cap"></i> Education</a>
-    <a href="#certifications"><i class="fa fa-trophy"></i> Certifications</a>
-    <a href="#interests"><i class="fa fa-heart"></i> Interests</a>
-    <a href="files/Resume.pdf" download><i class="fa fa-download"></i> Download Resume</a>
-  </nav>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <div class="social-links">
-    <a href="http://www.linkedin.com/in/abdullah-barut" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-</aside>
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  min-height: 100vh;
+}
 
-<!-- MAIN -->
-<main class="main">
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: var(--navy);
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  gap: 0;
+}
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-label">Introduction</div>
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      IT and data professional with experience in systems analysis, reporting, and technical problem solving. Skilled in building and improving processes, working with data to support decision making, and collaborating across technical and business teams. Detail-oriented, quick to learn new tools and technologies, and focused on turning information into solutions.
-    </p>
+.profile-wrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  overflow: hidden;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
 
-    <div class="skills-grid">
-      <div class="skill-tag"><i class="fa fa-database"></i> SQL</div>
-      <div class="skill-tag"><i class="fa fa-file-excel"></i> Excel</div>
-      <div class="skill-tag"><i class="fa fa-chart-bar"></i> Power BI</div>
-      <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-      <div class="skill-tag"><i class="fa fa-chart-line"></i> Tableau</div>
-      <div class="skill-tag"><i class="fa fa-laptop"></i> Microsoft Intune</div>
-      <div class="skill-tag"><i class="fab fa-microsoft"></i> Azure AD</div>
-      <div class="skill-tag"><i class="fa fa-ticket"></i> Jira</div>
-      <div class="skill-tag"><i class="fa fa-shield"></i> Sophos</div>
-      <div class="skill-tag"><i class="fab fa-html5"></i> HTML / CSS</div>
-      <div class="skill-tag"><i class="fa fa-gears"></i> Automic</div>
-    </div>
-  </section>
+.profile-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-label">Work</div>
-    <h2 class="section-title">Projects</h2>
+.sidebar h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 4px;
+}
 
-    <!-- PROFESSIONAL -->
-    <div class="project-section-label"><i class="fa fa-building"></i> Professional Projects</div>
+.sidebar h1 span { color: var(--accent-light); }
 
-    <!-- Power BI Dashboard -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="Device_Lifecycle_Dashboard.pdf" alt="Device Lifecycle Dashboard" onerror="this.parentElement.innerHTML='<i class=\'fa fa-chart-bar\'></i><span>Device Lifecycle Dashboard</span>'; this.parentElement.classList.add('placeholder');">
-      </div>
-      <div class="project-body">
-        <span class="project-badge work">Professional</span>
-        <h3>Global Device Lifecycle Dashboard</h3>
-        <div class="project-tools">
-          <span>Power BI</span><span>Excel</span><span>Jira Assets</span>
-        </div>
-        <p>End-to-end device lifecycle dashboard built using exported Jira Assets data. Identified 56 actively deployed devices past their 4-year replacement threshold across global offices, and flagged 11 retired devices with no audit record as a data security risk.</p>
-        <ul>
-          <li>Cleaned and transformed raw asset data in Excel using helper columns and pivot tables</li>
-          <li>Built interactive Power BI dashboard with KPI cards, treemap, map, donut chart, and matrix</li>
-          <li>Delivered actionable procurement recommendations to IT leadership</li>
-          <li>Added compliance page identifying unaudited retired devices</li>
-        </ul>
-        <div class="btn-row">
-          <a href="Device_Lifecycle_Dashboard.pdf" target="_blank" class="btn btn-primary"><i class="fa fa-eye"></i> View Dashboard</a>
-        </div>
-      </div>
-    </div>
+.sidebar-sub {
+  font-size: 12px;
+  color: #8aa0c8;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
 
-    <!-- PERSONAL -->
-    <div class="project-section-label" style="margin-top:36px;"><i class="fa fa-code"></i> Personal Projects</div>
+.sidebar-location {
+  font-size: 12px;
+  color: #8aa0c8;
+  text-align: center;
+  margin-bottom: 24px;
+}
 
-    <!-- Online Sales -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="img/OnlineSales.png" alt="Online Sales Analysis">
-      </div>
-      <div class="project-body">
-        <span class="project-badge">Personal</span>
-        <h3>Online Sales Analysis</h3>
-        <div class="project-tools">
-          <span>Python</span><span>Pandas</span><span>Plotly</span><span>Matplotlib</span><span>Seaborn</span>
-        </div>
-        <p>Cleaned and analyzed over 40,000 sales records, addressing missing data and format inconsistencies to uncover key revenue insights across countries and product categories.</p>
-        <ul>
-          <li>Choropleth map displaying revenue by country</li>
-          <li>Stacked area chart showing revenue trends over time</li>
-          <li>Bar chart highlighting top-selling products by revenue</li>
-        </ul>
-        <div class="btn-row">
-          <a href="https://github.com/Fennixs/Online_Sales_Analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
-        </div>
-      </div>
-    </div>
+.sidebar-location i { margin-right: 4px; color: var(--gold); }
 
-    <!-- Bike Sales -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="img/BikeSale.png" alt="Bike Sales Analysis">
-      </div>
-      <div class="project-body">
-        <span class="project-badge">Personal</span>
-        <h3>Bike Sales Analysis</h3>
-        <div class="project-tools">
-          <span>Excel</span><span>Pivot Tables</span>
-        </div>
-        <p>Cleaned and analyzed 1,000+ customer records. Built interactive Excel dashboards with pivot tables exploring the relationship between income, age, commute habits, and bike purchases.</p>
-        <ul>
-          <li>Interactive filters across all charts for dynamic exploration</li>
-          <li>Bar chart showing customer income vs purchase amounts</li>
-          <li>Line graph visualizing age distribution and commute trends</li>
-        </ul>
-        <div class="btn-row">
-          <a href="https://github.com/Fennixs/BikeSales-data-analysis/tree/main" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
-        </div>
-      </div>
-    </div>
+.sidebar nav {
+  width: 100%;
+  margin-bottom: 32px;
+}
 
-    <!-- Work Life Balance -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="img/WorkLife.png" alt="Work-Life Balance Insights">
-      </div>
-      <div class="project-body">
-        <span class="project-badge">Personal</span>
-        <h3>Work-Life Balance Insights Analysis</h3>
-        <div class="project-tools">
-          <span>Tableau</span><span>SQL</span>
-        </div>
-        <p>Analyzed 2,000+ records to visualize work-life balance patterns including job satisfaction trends, depression risk levels, and financial stress correlations.</p>
-        <ul>
-          <li>Interactive Tableau dashboards with drill-down capability</li>
-          <li>SQL queries for data cleaning, aggregation, and extraction</li>
-        </ul>
-        <div class="btn-row">
-          <a href="https://public.tableau.com/views/WorkplaceWellnessTableau/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="btn btn-primary"><i class="fa fa-chart-bar"></i> View Dashboard</a>
-          <a href="https://github.com/Fennixs/wellness-data-analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
-        </div>
-      </div>
-    </div>
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  color: #8aa0c8;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
 
-    <!-- Layoffs -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="img/Clean.png" alt="Layoffs Cleaning Analysis">
-      </div>
-      <div class="project-body">
-        <span class="project-badge">Personal</span>
-        <h3>Layoffs Cleaning Analysis</h3>
-        <div class="project-tools">
-          <span>MySQL</span>
-        </div>
-        <p>Analyzed 2,000+ data points on global layoffs between 2020 and 2023 using MySQL for cleaning and extraction. Identified which sectors, regions, and companies were most impacted.</p>
-        <ul>
-          <li>Layoffs analyzed by country, industry, and location</li>
-          <li>Tracked largest single-event layoffs and company-level impact</li>
-        </ul>
-        <div class="btn-row">
-          <a href="https://github.com/Fennixs/Layoffs-Cleaning-Analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
+.sidebar nav a:hover {
+  background: rgba(46,111,220,0.15);
+  color: var(--white);
+}
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">Experience</h2>
+.sidebar nav a i { width: 16px; text-align: center; }
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-body">
-        <div class="exp-header">
-          <div class="exp-title">IT Support Technician II</div>
-          <div class="exp-date">Dec 2025 – Present</div>
-        </div>
-        <div class="exp-company">Burton Snowboards — Burlington, VT</div>
-        <p>Support and maintain IT systems across a global organization, coordinating with teams in the US, Japan, China, and other international offices. Collaborate cross-departmentally with finance, marketing, and operations teams to assess technology needs and implement solutions. Assist in system evaluations, migrations, and process improvements while maintaining documentation for knowledge sharing across departments and regions.</p>
-      </div>
-    </div>
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+}
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-body">
-        <div class="exp-header">
-          <div class="exp-title">IT Specialist</div>
-          <div class="exp-date">Jan 2025 – Jan 2026</div>
-        </div>
-        <div class="exp-company">Vermont Federal Credit Union — South Burlington, VT</div>
-        <p>Monitored and analyzed daily batch processes using Automic, identifying issues and implementing solutions to maintain operational efficiency. Built and maintained internal documentation and reporting systems. Partnered with business teams to support core banking applications and led device deployment using Microsoft Intune and Azure AD during an organization-wide hardware refresh.</p>
-      </div>
-    </div>
+.social-links a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8aa0c8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
 
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-body">
-        <div class="exp-header">
-          <div class="exp-title">Web Developer Intern</div>
-          <div class="exp-date">May 2022 – Aug 2022</div>
-        </div>
-        <div class="exp-company">CPA Site Solutions — Colchester, VT</div>
-        <p>Developed and maintained websites using HTML, CSS, JavaScript, and MySQL. Conducted data analysis and reporting in Excel to improve user engagement by 5%. Optimized code across 1,000+ websites and collaborated with cross-functional teams to resolve technical issues and implement client feedback.</p>
-      </div>
-    </div>
-  </section>
+.social-links a:hover {
+  background: var(--accent);
+  color: var(--white);
+}
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="section-label">Academic</div>
-    <h2 class="section-title">Education</h2>
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main {
+  flex: 1;
+  padding: 60px 64px;
+  max-width: 960px;
+}
 
-    <div class="edu-card">
-      <div>
-        <div class="edu-school">University of Vermont</div>
-        <div class="edu-degree">Bachelor of Science in Computer Science — Minor in Arts</div>
-        <div class="edu-gpa">GPA: 3.7 &nbsp;|&nbsp; Relevant coursework: Databases, Data Structures, Algorithms, Software Engineering</div>
-      </div>
-      <div class="edu-date">Aug 2021 – Dec 2024</div>
-    </div>
+section {
+  margin-bottom: 72px;
+}
 
-    <div class="edu-card">
-      <div>
-        <div class="edu-school">Burlington High School</div>
-        <div class="edu-degree">High School Diploma</div>
-        <div class="edu-gpa">GPA: 3.98</div>
-      </div>
-      <div class="edu-date">Aug 2017 – Jun 2021</div>
-    </div>
-  </section>
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
 
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <div class="section-label">Credentials</div>
-    <h2 class="section-title">Certifications</h2>
-    <ul class="cert-list">
-      <li>
-        <i class="fa fa-trophy"></i>
-        Google Data Analytics Certificate — Google / Coursera
-        <span class="cert-badge">In Progress</span>
-      </li>
-      <li>
-        <i class="fa fa-trophy"></i>
-        <a href="img/freeCode.pdf" target="_blank">Responsive Web Design — freeCodeCamp</a>
-      </li>
-      <li>
-        <i class="fa fa-trophy"></i>
-        <a href="img/analyst.png" target="_blank">Data Analyst Certification — Alex The Analyst</a>
-      </li>
-    </ul>
-  </section>
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
 
-  <!-- INTERESTS -->
-  <section id="interests">
-    <div class="section-label">Personal</div>
-    <h2 class="section-title">Interests</h2>
-    <div class="interests-text">
-      <p>I am a Vermont native who enjoys the outdoors — hiking, camping, and this year I picked up snowboarding.</p>
-      <p style="margin-top:12px;">My favorite TV show is <em>Star Trek: The Next Generation</em>. My favorite character is Data — an android who approaches every problem with logic and precision, always seeking to understand and improve. I find that relatable.</p>
-      <p style="margin-top:12px;">My favorite movies are <em>The Truman Show</em> (1998) and <em>The Shawshank Redemption</em> (1994).</p>
-      <p style="margin-top:12px;">I love to read, and my favorite quote is:</p>
-      <blockquote>"All things are difficult before they are easy." – Thomas Fuller</blockquote>
-    </div>
-  </section>
+/* ============================================
+   ABOUT
+   ============================================ */
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 680px;
+}
 
-</main>
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
 
-</body>
-</html>
+.skill-tag {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.skill-tag i { color: var(--accent); font-size: 14px; }
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+.project-section-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover { box-shadow: var(--card-shadow-hover); }
+
+.project-img {
+  width: 260px;
+  min-width: 260px;
+  background: var(--navy);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.project-img.placeholder {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  flex-direction: column;
+  gap: 8px;
+  color: #8aa0c8;
+  font-size: 13px;
+  padding: 24px;
+  text-align: center;
+}
+
+.project-img.placeholder i {
+  font-size: 32px;
+  color: var(--accent-light);
+  margin-bottom: 8px;
+}
+
+.project-body {
+  padding: 28px 32px;
+  flex: 1;
+}
+
+.project-badge {
+  display: inline-block;
+  background: rgba(46,111,220,0.1);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.project-badge.work { background: rgba(201,168,76,0.12); color: var(--gold); }
+
+.project-body h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.project-tools {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.project-tools span {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.project-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.project-body ul {
+  margin: 0 0 16px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover { background: var(--navy); }
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover { background: var(--accent); color: var(--white); }
+
+/* ============================================
+   EXPERIENCE
+   ============================================ */
+.exp-item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.exp-item:last-child { border-bottom: none; }
+
+.exp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 6px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.exp-dot::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  width: 2px;
+  height: calc(100% + 24px);
+  background: var(--border);
+}
+
+.exp-item:last-child .exp-dot::after { display: none; }
+
+.exp-body { flex: 1; }
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.exp-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.exp-company {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.exp-body p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   EDUCATION
+   ============================================ */
+.edu-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.edu-school {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.edu-degree {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.edu-gpa {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.edu-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ============================================
+   CERTIFICATIONS
+   ============================================ */
+.cert-list { list-style: none; }
+
+.cert-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.cert-list li:last-child { border-bottom: none; }
+
+.cert-list li i { color: var(--gold); font-size: 16px; }
+
+.cert-list a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.cert-list a:hover { text-decoration: underline; }
+
+.cert-badge {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(201,168,76,0.12);
+  color: var(--gold);
+}
+
+/* ============================================
+   INTERESTS
+   ============================================ */
+.interests-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: var(--navy);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  body { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: relative; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 24px; }
+  .main { padding: 32px 24px; }
+  .project-card { flex-direction: column; }
+  .project-img { width: 100%; min-width: unset; height: 180px; }
+}
