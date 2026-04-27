@@ -8,6 +8,34 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
+  <style>
+    html, body { overflow-x: hidden; }
+    .sidebar {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      height: 100vh !important;
+      width: 280px !important;
+      z-index: 100 !important;
+    }
+    .main {
+      margin-left: 280px !important;
+      width: calc(100% - 280px) !important;
+      max-width: calc(100% - 280px) !important;
+      min-width: 0 !important;
+      overflow-x: hidden !important;
+      box-sizing: border-box !important;
+    }
+    .project-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    section {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+  </style>
 </head>
 <body>
 
