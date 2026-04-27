@@ -42,8 +42,9 @@ body {
   min-width: 280px;
   flex-shrink: 0;
   background: var(--navy);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -51,6 +52,7 @@ body {
   align-items: center;
   padding: 40px 24px;
   gap: 0;
+  z-index: 100;
 }
 
 .profile-wrap {
@@ -159,6 +161,7 @@ body {
   min-width: 0;
   overflow-x: hidden;
   box-sizing: border-box;
+  margin-left: 280px;
 }
 
 section {
