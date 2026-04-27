@@ -253,21 +253,19 @@ section {
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  min-height: 200px;
 }
 
 .project-img img {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   display: block;
   opacity: 0.95;
 }
 
 .project-img img.img-contain {
   object-fit: contain;
-  padding: 12px;
+  padding: 8px;
 }
 
 .project-img.placeholder {
