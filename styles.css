@@ -238,23 +238,23 @@ section {
   margin-bottom: 24px;
   border: 1px solid var(--border);
   transition: box-shadow 0.2s;
-  align-items: center;
+  align-items: stretch;
+  min-height: 220px;
 }
 
 .project-card:hover { box-shadow: var(--card-shadow-hover); }
 
 .project-img {
-  width: 220px;
-  min-width: 220px;
-  max-width: 220px;
-  height: 220px;
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
   background: var(--navy);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  align-self: center;
+  align-self: stretch;
 }
 
 .project-img img {
