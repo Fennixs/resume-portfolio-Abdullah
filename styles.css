@@ -261,6 +261,12 @@ section {
   opacity: 0.9;
 }
 
+.project-img img.img-contain {
+  object-fit: contain;
+  padding: 12px;
+  background: var(--navy);
+}
+
 .project-img.placeholder {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   flex-direction: column;
