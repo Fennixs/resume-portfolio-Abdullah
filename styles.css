@@ -246,25 +246,28 @@ section {
 .project-img {
   width: 260px;
   min-width: 260px;
+  max-width: 260px;
   background: var(--navy);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: stretch;
+  min-height: 200px;
 }
 
 .project-img img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 100%;
   object-fit: contain;
-  opacity: 0.9;
+  display: block;
+  opacity: 0.95;
 }
 
 .project-img img.img-contain {
   object-fit: contain;
   padding: 12px;
-  background: var(--navy);
 }
 
 .project-img.placeholder {
