@@ -42,7 +42,6 @@ body {
   min-width: 280px;
   flex-shrink: 0;
   background: var(--navy);
-  min-height: 100vh;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -128,6 +127,8 @@ body {
   gap: 12px;
   margin-top: auto;
   padding-top: 24px;
+  padding-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .social-links a {
