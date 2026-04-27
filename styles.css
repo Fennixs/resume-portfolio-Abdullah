@@ -148,13 +148,17 @@ body {
 .main {
   flex: 1;
   padding: 60px 64px;
+  width: calc(100vw - 280px);
   max-width: calc(100vw - 280px);
-  overflow-x: hidden;
   min-width: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 section {
   margin-bottom: 72px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-label {
@@ -237,12 +241,14 @@ section {
   margin-bottom: 20px;
   position: relative;
   min-height: 240px;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: flex-end;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 24px rgba(15,31,61,0.12);
   cursor: pointer;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card:hover {
