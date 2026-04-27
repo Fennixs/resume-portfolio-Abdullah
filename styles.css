@@ -229,114 +229,81 @@ section {
 }
 
 .project-card {
-  background: var(--white);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(15,31,61,0.08);
   overflow: hidden;
-  display: flex;
-  gap: 0;
   margin-bottom: 20px;
-  border: 0.5px solid var(--border);
-  transition: transform 0.2s, box-shadow 0.2s;
-  min-height: 200px;
-  align-items: stretch;
   position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(15,31,61,0.12);
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 48px rgba(15,31,61,0.16);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(15,31,61,0.2);
 }
 
-.project-img {
-  width: 280px;
-  min-width: 280px;
-  max-width: 280px;
+.project-card-bg {
+  position: absolute;
+  inset: 0;
   background: var(--navy);
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  align-self: stretch;
-  position: relative;
 }
 
-.project-img img {
+.project-card-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  display: block;
-  opacity: 0.95;
-  transition: transform 0.4s;
+  opacity: 0.4;
+  transition: transform 0.4s, opacity 0.3s;
 }
 
-.project-card:hover .project-img img {
+.project-card:hover .project-card-bg img {
   transform: scale(1.05);
+  opacity: 0.5;
 }
 
-.project-img img.img-contain {
-  object-fit: contain;
-  padding: 8px;
-}
-
-.project-img-fade {
+.project-card-overlay {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 100%;
-  background: linear-gradient(to right, transparent, #ffffff);
-  pointer-events: none;
-}
-
-.project-img.placeholder {
-  flex-direction: column;
-  gap: 8px;
-  color: #8aa0c8;
-  font-size: 13px;
-  padding: 24px;
-  text-align: center;
-}
-
-.project-img.placeholder i {
-  font-size: 32px;
-  color: var(--accent-light);
-  margin-bottom: 8px;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,10,20,0.95) 0%, rgba(5,10,20,0.6) 50%, rgba(5,10,20,0.2) 100%);
 }
 
 .project-body {
+  position: relative;
+  z-index: 2;
   padding: 28px 32px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
 
 .project-badge {
   display: inline-block;
-  background: rgba(46,111,220,0.1);
-  color: #1a4fa0;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 3px 10px;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  background: rgba(201,168,76,0.2);
+  color: #c9a84c;
+  border: 0.5px solid rgba(201,168,76,0.4);
 }
 
 .project-badge.work {
-  background: rgba(201,168,76,0.15);
-  color: #9a7a1a;
+  background: rgba(201,168,76,0.2);
+  color: #c9a84c;
+  border: 0.5px solid rgba(201,168,76,0.4);
 }
 
 .project-body h3 {
   font-family: 'DM Serif Display', serif;
-  font-size: 20px;
-  color: var(--navy);
-  margin-bottom: 8px;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .project-tools {
@@ -347,27 +314,28 @@ section {
 }
 
 .project-tools span {
-  background: #f1f5fb;
-  border: 0.5px solid #d0daf0;
+  background: rgba(255,255,255,0.1);
+  border: 0.5px solid rgba(255,255,255,0.2);
   border-radius: 20px;
   padding: 3px 12px;
   font-size: 11px;
-  font-weight: 600;
-  color: #3d5a8a;
+  font-weight: 500;
+  color: #ffffff;
   display: inline-block;
 }
 
 .project-body p {
   font-size: 13px;
   line-height: 1.7;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.75);
   margin-bottom: 12px;
+  max-width: 680px;
 }
 
 .project-body ul {
   margin: 0 0 16px 16px;
   font-size: 12px;
-  color: var(--text-muted);
+  color: rgba(255,255,255,0.65);
   line-height: 1.8;
 }
 
@@ -392,15 +360,15 @@ section {
   color: var(--white);
 }
 
-.btn-primary:hover { background: var(--navy); }
+.btn-primary:hover { background: #ffffff; color: var(--navy); }
 
 .btn-outline {
-  background: transparent;
-  border: 1.5px solid var(--accent);
-  color: var(--accent);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
 }
 
-.btn-outline:hover { background: var(--accent); color: var(--white); }
+.btn-outline:hover { background: rgba(255,255,255,0.2); }
 
 /* ============================================
    EXPERIENCE
