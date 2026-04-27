@@ -25,6 +25,7 @@ body {
   color: var(--text);
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ============================================
@@ -147,7 +148,9 @@ body {
 .main {
   flex: 1;
   padding: 60px 64px;
-  max-width: 960px;
+  max-width: calc(100vw - 280px);
+  overflow-x: hidden;
+  min-width: 0;
 }
 
 section {
