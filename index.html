@@ -2,6 +2,353 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Abdullah Barut - IT and Data Professional Portfolio">
+  <title>Abdullah Barut | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    html, body { overflow-x: hidden; }
+    @media (min-width: 1025px) {
+      .sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100vh !important;
+        width: 280px !important;
+        z-index: 100 !important;
+      }
+      .main {
+        margin-left: 280px !important;
+        width: calc(100% - 280px) !important;
+        max-width: calc(100% - 280px) !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+    }
+    .project-card {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    section {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    @media (max-width: 1024px) {
+      body { flex-direction: column !important; }
+      .sidebar {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        flex-direction: column !important;
+        padding: 20px 16px !important;
+      }
+      .sidebar nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 6px !important;
+      }
+      .sidebar nav a {
+        padding: 6px 12px !important;
+        font-size: 11px !important;
+        border-radius: 20px !important;
+        background: rgba(255,255,255,0.08) !important;
+      }
+      .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 16px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="profile-wrap">
+    <img src="img/profile-2026.jpg" alt="Abdullah Barut">
+  </div>
+  <h1>Abdullah <span>Barut</span></h1>
+  <div class="sidebar-sub">IT &amp; Data Professional</div>
+  <div class="sidebar-location"><i class="fa fa-location-dot"></i> Essex, VT</div>
+
+  <nav>
+    <a href="#about"><i class="fa fa-user"></i> About</a>
+    <a href="#projects"><i class="fa fa-diagram-project"></i> Projects</a>
+    <a href="#experience"><i class="fa fa-briefcase"></i> Experience</a>
+    <a href="#education"><i class="fa fa-graduation-cap"></i> Education</a>
+    <a href="#certifications"><i class="fa fa-trophy"></i> Certifications</a>
+    <a href="#interests"><i class="fa fa-heart"></i> Interests</a>
+    <a href="files/Resume.pdf" download><i class="fa fa-download"></i> Download Resume</a>
+  </nav>
+
+  <div class="social-links">
+    <a href="http://www.linkedin.com/in/abdullah-barut" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">Introduction</div>
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+      IT and data professional with experience in systems analysis, reporting, and technical problem solving. Skilled in building and improving processes, working with data to support decision making, and collaborating across technical and business teams. Detail-oriented, quick to learn new tools and technologies, and focused on turning information into solutions.
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill-tag"><i class="fa fa-database"></i> SQL</div>
+      <div class="skill-tag"><i class="fa fa-file-excel"></i> Excel</div>
+      <div class="skill-tag"><i class="fa fa-chart-bar"></i> Power BI</div>
+      <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-tag"><i class="fa fa-chart-line"></i> Tableau</div>
+      <div class="skill-tag"><i class="fa fa-laptop"></i> Microsoft Intune</div>
+      <div class="skill-tag"><i class="fab fa-microsoft"></i> Azure AD</div>
+      <div class="skill-tag"><i class="fa fa-users"></i> Active Directory</div>
+      <div class="skill-tag"><i class="fa fa-ticket"></i> Jira</div>
+      <div class="skill-tag"><i class="fa fa-shield"></i> Sophos</div>
+      <div class="skill-tag"><i class="fab fa-html5"></i> HTML / CSS</div>
+      <div class="skill-tag"><i class="fa fa-gears"></i> Automic</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Work</div>
+    <h2 class="section-title">Projects</h2>
+
+    <!-- PROFESSIONAL -->
+    <div class="project-section-label"><i class="fa fa-building"></i> Professional Projects</div>
+
+    <!-- Power BI Dashboard -->
+    <div class="project-card">
+      <div class="project-card-bg" style="background:#0f1f3d;">
+        <img src="img/dashboard-preview.jpg" alt="Device Lifecycle Dashboard" onerror="this.style.display='none'">
+      </div>
+      <div class="project-card-overlay"></div>
+      <div class="project-body">
+        <span class="project-badge work">Professional</span>
+        <h3>Global Device Lifecycle Dashboard</h3>
+        <div class="project-tools">
+          <span>Power BI</span><span>Excel</span><span>Jira Assets</span>
+        </div>
+        <p>End-to-end device lifecycle dashboard built using exported Jira Assets data. Identified 56 actively deployed devices past their 4-year replacement threshold and flagged 11 retired devices as a data security risk.</p>
+        <div class="btn-row">
+          <a href="img/Device_Lifecycle_Dashboard.pdf" target="_blank" class="btn btn-primary"><i class="fa fa-eye"></i> View Dashboard</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERSONAL -->
+    <div class="project-section-label" style="margin-top:36px;"><i class="fa fa-code"></i> Personal Projects</div>
+
+    <!-- Online Sales -->
+    <div class="project-card">
+      <div class="project-card-bg" style="background:#0d3347;">
+        <img src="img/online_sales_thumb.png" alt="Online Sales Analysis">
+      </div>
+      <div class="project-card-overlay"></div>
+      <div class="project-body">
+        <span class="project-badge">Personal</span>
+        <h3>Online Sales Analysis</h3>
+        <div class="project-tools">
+          <span>Python</span><span>Pandas</span><span>Plotly</span><span>Matplotlib</span><span>Seaborn</span>
+        </div>
+        <p>Cleaned and analyzed over 40,000 sales records to uncover key revenue insights across countries and product categories.</p>
+        <div class="btn-row">
+          <a href="https://github.com/Fennixs/Online_Sales_Analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bike Sales -->
+    <div class="project-card">
+      <div class="project-card-bg" style="background:#1a1040;">
+        <img src="img/bike_sales_thumb.png" alt="Bike Sales Analysis">
+      </div>
+      <div class="project-card-overlay"></div>
+      <div class="project-body">
+        <span class="project-badge">Personal</span>
+        <h3>Bike Sales Analysis</h3>
+        <div class="project-tools">
+          <span>Excel</span><span>Pivot Tables</span>
+        </div>
+        <p>Cleaned and analyzed 1,000+ customer records with interactive Excel dashboards exploring income, age, commute habits, and bike purchases.</p>
+        <div class="btn-row">
+          <a href="https://github.com/Fennixs/BikeSales-data-analysis/tree/main" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Life Balance -->
+    <div class="project-card">
+      <div class="project-card-bg" style="background:#0a2818;">
+        <img src="img/worklife_thumb.png" alt="Work-Life Balance Insights">
+      </div>
+      <div class="project-card-overlay"></div>
+      <div class="project-body">
+        <span class="project-badge">Personal</span>
+        <h3>Work-Life Balance Insights Analysis</h3>
+        <div class="project-tools">
+          <span>Tableau</span><span>SQL</span>
+        </div>
+        <p>Analyzed 2,000+ records to visualize job satisfaction, depression risk levels, and financial stress correlations.</p>
+        <div class="btn-row">
+          <a href="https://public.tableau.com/views/WorkplaceWellnessTableau/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="btn btn-primary"><i class="fa fa-chart-bar"></i> View Dashboard</a>
+          <a href="https://github.com/Fennixs/wellness-data-analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layoffs -->
+    <div class="project-card">
+      <div class="project-card-bg" style="background:#1a1a1a;">
+        <img src="img/layoffs_thumb.png" alt="Layoffs Cleaning Analysis">
+      </div>
+      <div class="project-card-overlay"></div>
+      <div class="project-body">
+        <span class="project-badge">Personal</span>
+        <h3>Layoffs Cleaning Analysis</h3>
+        <div class="project-tools">
+          <span>MySQL</span>
+        </div>
+        <p>Analyzed 2,000+ global layoff data points from 2020 to 2023 using MySQL. Identified which sectors, regions, and companies were most impacted.</p>
+        <div class="btn-row">
+          <a href="https://github.com/Fennixs/Layoffs-Cleaning-Analysis" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> View GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-body">
+        <div class="exp-header">
+          <div class="exp-title">IT Support Technician II</div>
+          <div class="exp-date">Dec 2025 – Present</div>
+        </div>
+        <div class="exp-company">Burton Snowboards — Burlington, VT</div>
+        <p>Support and maintain IT systems across a global organization, coordinating with teams in the US, Japan, China, and other international offices. Collaborate cross-departmentally with finance, marketing, and operations teams to assess technology needs and implement solutions. Assist in system evaluations, migrations, and process improvements while maintaining documentation for knowledge sharing across departments and regions.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-body">
+        <div class="exp-header">
+          <div class="exp-title">IT Specialist</div>
+          <div class="exp-date">Jan 2025 – Jan 2026</div>
+        </div>
+        <div class="exp-company">Vermont Federal Credit Union — South Burlington, VT</div>
+        <p>Monitored and analyzed daily batch processes using Automic, identifying issues and implementing solutions to maintain operational efficiency. Built and maintained internal documentation and reporting systems. Partnered with business teams to support core banking applications and led device deployment using Microsoft Intune and Azure AD during an organization-wide hardware refresh.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-body">
+        <div class="exp-header">
+          <div class="exp-title">Web Developer Intern</div>
+          <div class="exp-date">May 2022 – Aug 2022</div>
+        </div>
+        <div class="exp-company">CPA Site Solutions — Colchester, VT</div>
+        <p>Developed and maintained websites using HTML, CSS, JavaScript, and MySQL. Conducted data analysis and reporting in Excel to improve user engagement by 5%. Optimized code across 1,000+ websites and collaborated with cross-functional teams to resolve technical issues and implement client feedback.</p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dot"></div>
+      <div class="exp-body">
+        <div class="exp-header">
+          <div class="exp-title">IT Support Assistant</div>
+          <div class="exp-date">Apr 2021 – Apr 2022</div>
+        </div>
+        <div class="exp-company">GoodDeal LLC — Williston, VT</div>
+        <p>Provided day-to-day technical support for a small second-hand retail store, assisting with POS systems, printers, and basic network troubleshooting. Used QuickBooks and Square data to generate sales and inventory reports, helping management make informed purchasing and operational decisions. Set up and maintained desktop hardware, barcode scanners, and receipt printers to ensure reliable store operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label">Academic</div>
+    <h2 class="section-title">Education</h2>
+
+    <div class="edu-card">
+      <div>
+        <div class="edu-school">University of Vermont</div>
+        <div class="edu-degree">Bachelor of Science in Computer Science — Minor in Arts</div>
+        <div class="edu-gpa">GPA: 3.7 &nbsp;|&nbsp; Relevant coursework: Databases, Data Structures, Algorithms, Software Engineering</div>
+      </div>
+      <div class="edu-date">Aug 2021 – Dec 2024</div>
+    </div>
+
+    <div class="edu-card">
+      <div>
+        <div class="edu-school">Burlington High School</div>
+        <div class="edu-degree">High School Diploma</div>
+        <div class="edu-gpa">GPA: 3.98</div>
+      </div>
+      <div class="edu-date">Aug 2017 – Jun 2021</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications</h2>
+    <ul class="cert-list">
+      <li>
+        <i class="fa fa-trophy"></i>
+        Google Data Analytics Certificate — Google / Coursera
+        <span class="cert-badge">In Progress</span>
+      </li>
+      <li>
+        <i class="fa fa-trophy"></i>
+        <a href="img/freeCode.pdf" target="_blank">Responsive Web Design — freeCodeCamp</a>
+      </li>
+      <li>
+        <i class="fa fa-trophy"></i>
+        <a href="img/analyst.png" target="_blank">Data Analyst Certification — Alex The Analyst</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- INTERESTS -->
+  <section id="interests">
+    <div class="section-label">Personal</div>
+    <h2 class="section-title">Interests</h2>
+    <div class="interests-text">
+      <p>I am a Vermont native who enjoys the outdoors — hiking, camping, and this year I picked up snowboarding.</p>
+      <p style="margin-top:12px;">My favorite TV show is <em>Star Trek: The Next Generation</em>. My favorite character is Data — an android who approaches every problem with logic and precision, always seeking to understand and improve. I find that relatable.</p>
+      <p style="margin-top:12px;">My favorite movies are <em>The Truman Show</em> (1998) and <em>The Shawshank Redemption</em> (1994).</p>
+      <p style="margin-top:12px;">I love to read, and my favorite quote is:</p>
+      <blockquote>"All things are difficult before they are easy." – Thomas Fuller</blockquote>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Abdullah Barut - IT and Data Professional Portfolio">
   <title>Abdullah Barut | Portfolio</title>
